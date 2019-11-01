@@ -8,21 +8,12 @@
 
 #background-img {
   position: fixed;
-  /* height: 100vh; */
-  /* top: 0;
-  left: 0; */
-  /* z-index: 0; */
-    /* width: 100vw;
-  height: 100vh; */
-  /* position: relative; */
   overflow: hidden;
 }
 
 #background-img > img {
-  /* z-index: 0; */
   opacity: 0.9;
   display: block;
-  /* width: 100vw; */
   height: 100vh;
   max-height: 100%;
   object-fit: cover;
@@ -33,17 +24,11 @@
   padding-right: 0;
 }
 
-.navbar {
-  /* opacity: 1 */
-}
-
 .default-color {
   background-color: rgba(0, 0, 0, 0.6) !important;
-  /* opacity: 0.2; */
 }
 
 h1, h2, h3, h4 {
-  /* z-index: 50; */
   position: relative;
 }
 
@@ -62,9 +47,8 @@ h1, h2, h3, h4 {
 }
 
 @keyframes bounce {
-  0%   {  }
   30% { transform: translate(0, 20px) }
-  100% { transform: translate(0, 0px) }
+  80% { transform: translate(0, 0px) }
 }
 
 .scroll-div {
@@ -78,7 +62,6 @@ h1, h2, h3, h4 {
   animation-name: bounce;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
-  /* animation-delay: 2s; */
 }
 
 .scroll-div span {
@@ -91,12 +74,11 @@ h1, h2, h3, h4 {
   width: 20px;
 }
 
-img {
 
+
+#home > h4 {
+  transition: all 0.4s;
 }
-
-
-
 
 
 

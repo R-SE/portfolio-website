@@ -25,8 +25,6 @@ class NavbarPage extends Component {
     },
   ]
 
-  // static 
-
   state = {
     activePage: "/"
   }
@@ -58,7 +56,9 @@ render() {
       </MDBNavbar>
       <Switch>
        <Route exact path="/" component={Home} />
-       <Route exact path="/jobs" component={() => <h1>LOL</h1>} />
+       <Route exact path="/jobs" component={() => <h1>EXPERIENCE</h1>} />
+       <Route exact path="/skills" component={() => <h1>SKILLS</h1>} />
+       <Route exact path="/contact" component={() => <h1>CONTACT</h1>} />
       </Switch>
      </Fragment>
     );
