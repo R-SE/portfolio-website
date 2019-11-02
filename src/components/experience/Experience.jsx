@@ -1,33 +1,23 @@
 import React from "react";
 import { MDBJumbotron, MDBContainer, MDBCardBody, MDBCardTitle, MDBCardImage, MDBCardText, MDBCol } from "mdbreact";
 import Testimonials from "../testimonial/Testimonials";
-import image from "../../assets/hack-capital-unsplash.jpg";
 
 const Experience = () => (
-  <MDBJumbotron fluid>
-    <MDBCol className="text-white text-center py-5 px-4 my-5 background-gradient">
-    <MDBContainer>
-            <MDBCardTitle className="card-title h1 pb-2">
-              <strong>"Helping people everywhere live healthier lives through behavior change"</strong>
-            </MDBCardTitle>
-
-            {/* <MDBCardImage
-              src={image}
-              className="img-fluid jobs-panel"
-            /> */}
-
-            <MDBCardBody>
-              <MDBCardTitle className="indigo-text h5 m-4">
-                Software Engineer @ Noom, Inc. ⁠— SEP 2018 to Current
-              </MDBCardTitle>
-
-            <Testimonials />
-
-
-              </MDBCardBody>
-    </MDBContainer>
-    </MDBCol>
-  </MDBJumbotron>
+  <MDBContainer className="job-page-container">
+    <MDBCardTitle className="h3 card-heading">
+      <strong>"Helping people everywhere live healthier lives through behavior change"</strong>
+    </MDBCardTitle>
+    <MDBCardBody>
+    <MDBCardTitle className="job-position card-heading">
+      <span className="line">Software Engineer @ Noom, Inc.</span>{' '}
+      <span className="line">(SEP 2018 to Now)</span>
+    </MDBCardTitle>
+    <MDBCardTitle className="job-position card-heading">
+      See what others have to say about my work!
+    </MDBCardTitle>
+    <Testimonials />
+    </MDBCardBody>
+  </MDBContainer>
 );
 
 export default Experience;

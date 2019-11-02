@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBMask, MDBView } from "mdbreact";
-import background from "../../assets/emile-perron-unsplash.jpg";
+// TODO: Replace with actual background image.
+import background from "../../assets/20191102_105510.jpg";
 
 const Background = () => (
 <MDBView waves id="background-img">
