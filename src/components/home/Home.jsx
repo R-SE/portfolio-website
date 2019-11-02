@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import doubleArrow from "../../assets/double_arrow_down.png";
 
 const Home = () => {
   const TIME_IN_MS_PER_STRING = 7000;
@@ -7,9 +8,10 @@ const Home = () => {
 
   const strings = [
     ["I build performant, scalable web apps", <br/>, "and deliver clean, well-designed code"],
-    ["퍼포멘트와 확장가능한 웹 앱와", <br/>,"간단한 설계코드 되어 있는 것을 전해 드립니다"],
+    ["मैं शानदार, बदलाव किये जाने योग्य वेब एप्लिकेशन बनाता हूं，", <br/>, "और बेहतर, अच्छी तरह से डिजाइन किये हुए कोड बनाता हूँ।"],
     ["Construyó escalante apps de web", <br />, "y preparó códigos limpios é estructurales"],
     ["我创建优化的，可扩展的Web应用程序，", <br/>, "并提供干净，设计良好的代码"],
+    ["퍼포멘트와 확장가능한 웹 앱와", <br/>,"간단한 설계코드 되어 있는 것을 전해 드립니다"],
   ];
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const Home = () => {
       <h4 className="h4-responsive" style={style}>{strings[idx]}</h4>
       <div className="scroll-div">
         <span>Scroll</span>
-        <img src="./assets/double_arrow_down.png" alt="down arrows" className="directional-arrow"/>
+        <img src={doubleArrow} alt="down arrows" className="directional-arrow"/>
       </div>
   </div>
 )};

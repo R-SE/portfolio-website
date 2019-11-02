@@ -18,10 +18,6 @@ class NavbarPage extends Component {
       page: "/skills",
       text: "skills"
     },
-    // {
-    //   page: "/contact",
-    //   text: "contact"
-    // },
   ]
 
   state = {
@@ -43,9 +39,15 @@ render() {
           <strong className="white-text">Rose Lin | Software Engineer </strong>
         </MDBCollapse>
         <MDBNavbarNav left>
-          <button class="btn-floating linkedin"><i class="fab fa-linkedin"></i></button>
-          <button class="btn-floating github"><i class="fab fa-github"></i></button>
-          <button class="btn-floating envelope"><i class="fa fa-envelope"></i></button>
+          <button class="btn-floating linkedin">
+            <a href="https://www.linkedin.com/in/roseswe/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" /></a>
+          </button>
+          <button class="btn-floating github">
+            <a href="https://github.com/R-SE" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" /></a>
+          </button>
+          <button class="btn-floating envelope">
+            <a href = "mailto: rose.lin.swe@gmail.com"><i class="fa fa-envelope" /></a>
+          </button>
           <button class="btn-floating file-alt"><i class="fas fa-file-alt"></i></button>
         </MDBNavbarNav>
         <MDBCollapse id="navbarCollapse3" navbar>

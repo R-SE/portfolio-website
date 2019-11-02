@@ -1,10 +1,11 @@
 import React from 'react';
 import { MDBMask, MDBView } from "mdbreact";
+import background from "../../assets/emile-perron-unsplash.jpg";
 
 const Background = () => (
 <MDBView waves id="background-img">
 <img
-  src="./assets/emile-perron-unsplash.jpg"
+  src={background}
   className="img-fluid"
   alt="programmer at work"
 />

@@ -128,3 +128,24 @@ h1, h2, h3, h4 {
 .navbar-nav {
   flex-direction: row;
 }
+
+.jobs-panel {
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
+  /* max-height: 300px; */
+}
+
+.background-gradient {
+  /* background-image: url(./assets/alexandr-podvalny-unsplash.jpg) no-repeat; */
+  background-color: rgba(45, 156, 204, 0.6);
+}
+
+.testimonials-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-title {
+  color: blue;
+}
