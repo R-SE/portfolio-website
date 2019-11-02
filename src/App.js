@@ -6,6 +6,7 @@ import NavbarPage from './components/navbar/Navbar';
 import Home from "./components/home/Home";
 // TODO: Add code-splitting: https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html
 import Experience from "./components/experience/Experience";
+import Skills from "./components/skills/Skills";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/jobs" component={Experience} />
-          <Route exact path="/skills" component={() => <h1>SKILLS</h1>} />
+          <Route exact path="/skills" component={Skills} />
         </Switch>
       </Router>
       {/* <MDBRow>

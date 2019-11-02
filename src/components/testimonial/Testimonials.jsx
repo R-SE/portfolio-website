@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from 'mdbreact';
 import keithPic from "../../assets/testimonial_keith.jpg";
 import nikolaPic from "../../assets/testimonial_nikola.jpg";
 import suminPic from "../../assets/testimonial_sumin.jpg";
@@ -28,16 +28,14 @@ const TESTIMONIALS = [
 
 const Card = ({testimonial: {name, position, text, image}}) => {
   return (
-    // <MDBCol>
-      <MDBCard>
-        <MDBCardImage className="img-fluid profile-pic" src={image} waves />
-        <MDBCardBody>
-          <MDBCardTitle className="card-title">{name}</MDBCardTitle>
-          <h6 className="card-subtitle">{position}</h6>
-          <MDBCardText>{text}</MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
-    // </MDBCol>
+    <MDBCard>
+      <MDBCardImage className="img-fluid profile-pic" src={image} waves />
+      <MDBCardBody>
+        <MDBCardTitle className="card-title">{name}</MDBCardTitle>
+        <h6 className="card-subtitle">{position}</h6>
+        <MDBCardText>{text}</MDBCardText>
+      </MDBCardBody>
+    </MDBCard>
   )
 }
 

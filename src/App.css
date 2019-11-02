@@ -10,6 +10,7 @@
   position: fixed;
   overflow: hidden;
   background-color: black;
+  z-index: -1;
 }
 
 #background-img > img {
@@ -18,7 +19,6 @@
   height: 100vh;
   max-height: 100%;
   object-fit: cover;
-  /* transform: rotate(180deg); */
   width: 100%;
 }
 
@@ -77,21 +77,16 @@ h1, h2, h3, h4 {
   width: 20px;
 }
 
-
-
 #home > h4 {
   transition: all 0.4s;
 }
 
 .btn-floating {
-  /* width: 80px;
-  height: 80px; */
   width: 40px;
   height: 40px;
   border: none;
   border-radius: 50%;
   position: relative;
-  /* padding: 0; */
   margin: 0.5em;
   vertical-align: middle;
   box-shadow:  2px 5px 10px rgba(0, 0, 0, 0.3);
@@ -159,7 +154,6 @@ h1, h2, h3, h4 {
 
 .job-page-container {
   padding-top: 3%;
-  background-color: white;
 }
 
 .card {
@@ -178,4 +172,20 @@ h1, h2, h3, h4 {
 
 span.line {
   display: inline-block;
+}
+
+
+.draggable-skill {
+  background-color: white;
+  text-align: left;
+  padding: 1em;
+  width: 100%;
+  /* background-color: #0073b1; */
+  color: #0073b1;;
+  border: 1px solid black;
+  font-size: 1.2em;
+}
+
+.droppable-column {
+  width: 10%;
 }

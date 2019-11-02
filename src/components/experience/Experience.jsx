@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBJumbotron, MDBContainer, MDBCardBody, MDBCardTitle, MDBCardImage, MDBCardText, MDBCol } from "mdbreact";
+import { MDBContainer, MDBCardBody, MDBCardTitle } from "mdbreact";
 import Testimonials from "../testimonial/Testimonials";
 
 const Experience = () => (
