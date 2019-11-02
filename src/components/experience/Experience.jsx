@@ -25,18 +25,3 @@ const Experience = () => (
 );
 
 export default Experience;
-
-
-{/* <MDBCardText>
-<h5 className="h5-responsive">
-  I collaborate with product managers and designers to implement new UI features,<br />
-  work with cross-team engineers to bring impactful projects to fruition,<br />
-  run A/B tests on web ad flows to increase conversion,<br />
-  do internationalization for interfaces,<br />
-  write technical documentation,<br />
-  onboard new engineers,<br />
-  do code reviews,<br />
-  fix bugs,<br />
-</h5>
-<h3>and contribute to the <span >success</span> of my team in any way possible.<br /></h3>
-</MDBCardText> */}
