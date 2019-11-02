@@ -20,7 +20,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Youngin Suh",
-    position: "Designer @ Noom",
+    position: "Product Designer @ Noom",
     image: younginPic,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat vel dui a, porta interdum augue. Duis in consequat augue, id facilisis quam. Suspendisse tincidunt ante at posuere luctus. Vestibulum tellus nisl, ornare eget nulla ut, sagittis dictum lectus. Fusce a mollis sapien, sed vestibulum erat. Aliquam eget lacinia nisl, in venenatis ex. Ut vel nisi mollis justo pellentesque hendrerit. Quisque dictum purus arcu, eget convallis turpis vestibulum ut. Ut dui ante, faucibus et molestie sit amet, ullamcorper quis nunc. Fusce id metus scelerisque felis venenatis pretium eget vel augue. Maecenas eu erat viverra libero convallis facilisis. Donec."
   },

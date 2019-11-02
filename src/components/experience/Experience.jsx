@@ -5,11 +5,15 @@ import Testimonials from "../testimonial/Testimonials";
 const Experience = () => (
   <MDBContainer className="job-page-container">
     <MDBCardTitle className="h3 card-heading">
-      <strong>"Helping people everywhere live healthier lives through behavior change"</strong>
+      <strong>
+        <span className="line">"Helping people everywhere</span>{' '}
+        <span className="line">live healthier lives</span>{' '}
+        <span className="line">through behavior change"</span>
+        </strong>
     </MDBCardTitle>
     <MDBCardBody>
     <MDBCardTitle className="job-position card-heading">
-      <span className="line">Software Engineer @ Noom, Inc.</span>{' '}
+      <span className="line">Software Engineer @ Noom</span>{' '}
       <span className="line">(SEP 2018 to Now)</span>
     </MDBCardTitle>
     <MDBCardTitle className="job-position card-heading">
