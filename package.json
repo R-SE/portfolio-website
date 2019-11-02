@@ -54,6 +54,7 @@
     "sass-loader": "7.2.0",
     "semver": "6.3.0",
     "style-loader": "1.0.0",
+    "styled-components": "^4.4.1",
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.4",
     "url-loader": "2.1.0",
@@ -137,13 +138,15 @@
         {
           "legacy": true
         }
-      ]
+      ],
+      "babel-plugin-styled-components"
     ],
     "presets": [
       "react-app"
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.6.0"
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "babel-plugin-styled-components": "^1.10.6"
   }
 }

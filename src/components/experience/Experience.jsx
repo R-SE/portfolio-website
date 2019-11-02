@@ -1,27 +1,41 @@
 import React from "react";
 import { MDBContainer, MDBCardBody, MDBCardTitle } from "mdbreact";
+import styled from 'styled-components'
 import Testimonials from "../testimonial/Testimonials";
 
+const StyledMDBContainer = styled(MDBContainer)`
+  padding-top: 3%;
+`;
+
+const StyledSpan = styled.span`
+  display: inline-block;
+  color: #fff;
+`;
+
+const StyledCardTitle = styled(MDBCardTitle)`
+  color: #fff;
+`;
+
 const Experience = () => (
-  <MDBContainer className="job-page-container">
-    <MDBCardTitle className="h3 card-heading">
+  <StyledMDBContainer>
+    <MDBCardTitle className="h3">
       <strong>
-        <span className="line">"Helping people everywhere</span>{' '}
-        <span className="line">live healthier lives</span>{' '}
-        <span className="line">through behavior change"</span>
+        <StyledSpan>"Helping people everywhere</StyledSpan>{' '}
+        <StyledSpan>live healthier lives</StyledSpan>{' '}
+        <StyledSpan>through behavior change"</StyledSpan>
         </strong>
     </MDBCardTitle>
     <MDBCardBody>
-    <MDBCardTitle className="job-position card-heading">
-      <span className="line">Software Engineer @ Noom</span>{' '}
-      <span className="line">(SEP 2018 to Now)</span>
-    </MDBCardTitle>
-    <MDBCardTitle className="job-position card-heading">
+    <StyledCardTitle>
+      <StyledSpan>Software Engineer @ Noom</StyledSpan>{' '}
+      <StyledSpan>(SEP 2018 to Now)</StyledSpan>
+    </StyledCardTitle>
+    <StyledCardTitle>
       See what others have to say about my work!
-    </MDBCardTitle>
+    </StyledCardTitle>
     <Testimonials />
     </MDBCardBody>
-  </MDBContainer>
+  </StyledMDBContainer>
 );
 
 export default Experience;

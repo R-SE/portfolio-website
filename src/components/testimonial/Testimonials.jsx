@@ -1,9 +1,35 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from 'mdbreact';
+import styled from 'styled-components';
 import keithPic from "../../assets/testimonial_keith.jpg";
 import nikolaPic from "../../assets/testimonial_nikola.jpg";
 import suminPic from "../../assets/testimonial_sumin.jpg";
 import younginPic from "../../assets/testimonial_youngin.jpg";
+
+const StyledMDBCardTitle = styled(MDBCardTitle)`
+  color: #0073b1;
+  text-shadow:  2px 5px 10px rgba(0, 0, 0, 0.3);
+`;
+
+const StyledSubtitle = styled.h6`
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 1em;
+`;
+
+const StyledMDBCardImage = styled(MDBCardImage)`
+  border-radius: 50%;
+  width: 80px;
+  margin: 1em auto 0 auto;
+`;
+
+const TestimonialsGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  justify-content: space-evenly;
+`;
 
 const TESTIMONIALS = [
   {
@@ -28,21 +54,27 @@ const TESTIMONIALS = [
 
 const Card = ({testimonial: {name, position, text, image}}) => {
   return (
-    <MDBCard>
-      <MDBCardImage className="img-fluid profile-pic" src={image} waves />
+    <StyledCard>
+      <StyledMDBCardImage className="img-fluid" src={image} waves />
       <MDBCardBody>
-        <MDBCardTitle className="card-title">{name}</MDBCardTitle>
-        <h6 className="card-subtitle">{position}</h6>
+        <StyledMDBCardTitle>{name}</StyledMDBCardTitle>
+        <StyledSubtitle className="card-subtitle">{position}</StyledSubtitle>
         <MDBCardText>{text}</MDBCardText>
       </MDBCardBody>
-    </MDBCard>
+    </StyledCard>
   )
 }
 
+const StyledCard = styled(MDBCard)`
+  min-width: 300px;
+  margin: 1em;
+  padding: 0;
+`;
+
 const Testimonials = () => (
-  <div className="testimonials-group">
+  <TestimonialsGroup>
     {TESTIMONIALS.map(testimonial => <Card testimonial={testimonial} />)}
-   </div>
-  )
+  </TestimonialsGroup>
+);
 
 export default Testimonials;

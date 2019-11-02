@@ -1,5 +1,44 @@
 import React, { useState, useEffect } from "react";
 import doubleArrow from "../../assets/double_arrow_down.png";
+import styled from 'styled-components'
+
+const HomeDiv = styled.div`
+  z-index: 100;
+  position: relative;
+  background-color: rgba(45, 156, 204, 0.6);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  top: 10em;
+  color: white;
+`;
+
+const Byline = styled.h4`
+  transition: all 0.4s;
+`;
+
+const Scroll = styled.div`
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  margin: 0 auto;
+  align-items: center;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+`;
+
+const ScrollText = styled.span`
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 2px;
+`;
+
+const DirectionalArrow = styled.img`
+  width: 20px;
+`;
+
 
 const Home = () => {
   const TIME_IN_MS_PER_STRING = 7000;
@@ -24,14 +63,14 @@ const Home = () => {
   }, [strings.length]);
 
   return (
-    <div id="home">
+    <HomeDiv>
       <h1 className="display-4">I'm <span role="img" aria-label="Rose" title="Rose">🌹</span>.</h1>
-      <h4 className="h4-responsive" style={style}>{strings[idx]}</h4>
-      <div className="scroll-div">
-        <span>Scroll</span>
-        <img src={doubleArrow} alt="down arrows" className="directional-arrow"/>
-      </div>
-  </div>
+      <Byline className="h4-responsive" style={style}>{strings[idx]}</Byline>
+      <Scroll>
+        <ScrollText>Scroll</ScrollText>
+        <DirectionalArrow src={doubleArrow} alt="down arrows" />
+      </Scroll>
+    </HomeDiv>
 )};
 
 export default Home;

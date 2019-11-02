@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse } from "mdbreact";
-
+import "./Navbar.css";
 
 
 class NavbarPage extends Component {
