@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBMask, MDBView } from "mdbreact";
 // TODO: Replace with actual background image.
 import background from "../../assets/20191102_105510.jpg";
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const BackgroundImg = styled.img`
   opacity: 0.4;
@@ -25,14 +25,14 @@ const Mask = styled(MDBMask)`
 `;
 
 const Background = () => (
-<BackgroundWrapper waves id="background-img">
-    <BackgroundImg
-      src={background}
-      className="img-fluid"
-      alt="programmer at work"
-    />
-    <Mask pattern={8} />
-</BackgroundWrapper>
+  <BackgroundWrapper waves id="background-img">
+      <BackgroundImg
+        src={background}
+        className="img-fluid"
+        alt="programmer at work"
+      />
+      <Mask pattern={8} />
+  </BackgroundWrapper>
 );
 
 export default Background;
