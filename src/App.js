@@ -8,6 +8,7 @@ import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components'
+// import Resume from "./assets/Rose_Lin_Resume_Software_Engineer.pdf";
 
 // Global Overrides for Material Bootstrap 
 const MDBOverrides = createGlobalStyle`
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/jobs" component={Experience} />
           <Route exact path="/skills" component={Skills} />
+          {/* <Route exact path="/resume" component={Resume} /> */}
         </Switch>
       </Router>
       {/* <MDBRow>

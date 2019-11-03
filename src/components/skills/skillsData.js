@@ -4,15 +4,11 @@ const SKILLS_DATA = {
     react: {id: 'react', content: 'ReactJS'},
     css: {id: 'css', content: 'CSS, Sass, Less'},
     python: {id: 'python', content: 'Python'},
+    beb: {id: 'beb', content: 'Beb'},
+    morebeb: {id: 'morebeb', content: 'More beb'},
   },
-  columns: {
-    mySkills: {
-      id: 'mySkills',
-      title: 'Current Skills',
-      skillIds: ['javascript', 'react', 'css', 'python']
-    }
-  },
-  columnOrder: ['mySkills']
+  mySkills: ['javascript', 'react', 'css'],
+  selectedSkills: ['beb', 'morebeb', 'python']
 };
 
 export default SKILLS_DATA;
