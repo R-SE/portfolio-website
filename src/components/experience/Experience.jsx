@@ -19,11 +19,9 @@ const StyledCardTitle = styled(MDBCardTitle)`
 const Experience = () => (
   <StyledMDBContainer>
     <MDBCardTitle className="h3">
-      <strong>
-        <StyledSpan>"Helping people everywhere</StyledSpan>{' '}
-        <StyledSpan>live healthier lives</StyledSpan>{' '}
-        <StyledSpan>through behavior change"</StyledSpan>
-        </strong>
+      <StyledSpan>"Helping people everywhere</StyledSpan>{' '}
+      <StyledSpan>live healthier lives</StyledSpan>{' '}
+      <StyledSpan>through behavior change"</StyledSpan>
     </MDBCardTitle>
     <MDBCardBody>
     <StyledCardTitle>

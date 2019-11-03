@@ -1,82 +1,96 @@
-import React, { Component } from "react";
-import SKILLS_DATA from "./skillsData";
+import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { MDBContainer, MDBCardBody, MDBCardTitle } from "mdbreact";
-import styled, { css } from 'styled-components'
+import { MDBContainer, MDBCardTitle } from "mdbreact";
+import styled from 'styled-components';
+import SKILLS_DATA from "./skillsData";
 
-const ColumnContainer = styled(MDBContainer)`
-  width: calc(50% - 50px);
+// const ColumnContainer = styled(MDBContainer)`
+//   width: calc(50% - 50px);
+//   display: inline-block;
+//   vertical-align: top;
+// `;
+
+const StyledMDBContainer = styled(MDBContainer)`
+  padding-top: 3%;
+`;
+
+const StyledSpan = styled.span`
   display: inline-block;
-  vertical-align: top;
+  color: #fff;
 `;
 
 
-class Skills extends Component {
-  constructor() {
-    super();
-    this.state = SKILLS_DATA;
-  }
+const Skills = () => {
+  const [ skills ] = useState(SKILLS_DATA);
 
-  onDragEnd = result => {
-    const {source, destination, draggableId} = result;
-    if (!destination || (source.droppableId === destination.droppableId && source.index === destination.index)) {
+  const onDragEnd = result => {
+    const { source, destination } = result;
+    if (!destination || source.index === destination.index) {
       return;
     }
 
-    console.log('ON DRAG END', source, destination, draggableId);
-
-    let newSource = Array.from(this.state[source.droppableId]);
-    newSource.splice(source.index, 1);
-    let newDestination = Array.from(this.state[destination.droppableId]);
-    newDestination.splice(destination.index, 0, draggableId.split('-').pop());
-
-    console.log(newSource, newDestination)
-
-    this.setState({[source.droppableId]: newSource, [destination.droppableId]: newDestination});
+    skills.splice(destination.index, 0, skills.splice(source.index, 1)[0]);
+    console.log('my skills', skills);
   }
   
-  render() {
-    const { mySkills, selectedSkills} = this.state;
-    return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <Column title="My Skills" id="mySkills" skillArr={mySkills} />
-        <Column title="Selected Skills" id="selectedSkills" skillArr={selectedSkills} />
-      </DragDropContext>
-    )
-  }
-}
-
-const Skill = ({skill, idx, list}) => {
-  console.log('in skill', idx, skill);
 
   return (
-  <Draggable draggableId={`${list}-${skill.id}`} index={idx}>
+    <StyledMDBContainer>
+      <MDBCardTitle className="h3">
+        <StyledSpan>What's important to you?</StyledSpan>
+      </MDBCardTitle>
+      <h4>
+        <StyledSpan>Let me know your priorities by drag and dropping my skills,</StyledSpan>{' '}
+        <StyledSpan>or adding new ones you don't see listed here.</StyledSpan>
+      </h4>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Column id="mySkills" skills={skills} />
+      </DragDropContext>
+    </StyledMDBContainer>
+  );
+}
+
+const StyledDraggable = styled.div`
+  // position: relative;
+  margin: .5em;
+  padding: .5em;
+  background-color: #24292e;
+`;
+
+const Skill = ({skill, idx}) => {
+  return (
+  <Draggable draggableId={skill.id} key={skill.id} index={idx}>
     {({draggableProps, dragHandleProps, innerRef}) =>
-      <div
-      style={{position: "relative"}}
-        className="draggable-skill"
+    
+      <StyledDraggable
         {...draggableProps}
         {...dragHandleProps}
         ref={innerRef}
         >
-        <span style={{position: "relative"}}>{skill.content}</span>
-      </div>}
+        {skill.icon || <i class="fas fa-plus-circle" />}{' '}{skill.content}
+      </StyledDraggable>}
   </Draggable>
 );
-  }
+}
 
-const Column = ({title, id, skillArr}) => (
-  <ColumnContainer>
-    <h1>{title}</h1>
-    <Droppable droppableId={id} className="droppable-column">
+const StyledDroppable = styled.div`
+  width: 50%;
+  font-size: 1.3em;
+  color: white;
+  text-align: left
+`;
+
+const Column = ({id, skills}) => (
+  <MDBContainer>
+    <Droppable droppableId={id}>
       {({innerRef, droppableProps, placeholder}) => (
-        <div ref={innerRef} {...droppableProps}>
-          {skillArr.map((skill, idx) => <Skill skill={SKILLS_DATA.skills[skill]} list={id} idx={idx}/>)}
+        <StyledDroppable ref={innerRef} {...droppableProps}>
+          {skills.map((skill, idx) => <Skill skill={skill} idx={idx} key={skill.id}/>)}
           {placeholder}
-        </div>
+        </StyledDroppable>
       )}
     </Droppable>
-  </ColumnContainer>
+  </MDBContainer>
 );
 
 export default Skills;
