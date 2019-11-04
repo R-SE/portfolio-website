@@ -40,7 +40,7 @@ const StyledMDBNavbar = styled(MDBNavbar)`
   }
 
   .envelope {
-    background-color: #a8372e;
+    background-color: #9948d9;
   }
 
   .file-alt {

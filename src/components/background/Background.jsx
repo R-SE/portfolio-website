@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBMask, MDBView } from "mdbreact";
-import background from "../../assets/20191102_105510.jpg";
 import styled from 'styled-components';
+import background from "../../assets/my_battlestation.jpg";
 
 const BackgroundImg = styled.img`
   opacity: 0.4;
