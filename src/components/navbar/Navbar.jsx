@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse } from "mdbreact";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const StyledMDBNavbar = styled(MDBNavbar)`
   .btn-floating {
@@ -84,21 +85,21 @@ UNSAFE_componentWillReceiveProps(props) {
 render() {
   return (
       <StyledMDBNavbar color="default-color" dark expand="md">
-        <MDBCollapse navbar>
-          <strong className="white-text">Rose Lin | Software Engineer </strong>
+        <MDBCollapse navbar style={{"flex-grow": 0}}>
+          <Link to="/" ><strong className="white-text">Rose Lin | Software Engineer </strong></Link>
         </MDBCollapse>
-        <MDBNavbarNav left>
-          <button className="btn-floating linkedin">
-            <a href="https://www.linkedin.com/in/roseswe/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin" /></a>
-          </button>
-          <button className="btn-floating github">
-            <a href="https://github.com/R-SE" target="_blank" rel="noopener noreferrer"><i className="fab fa-github" /></a>
-          </button>
-          <button className="btn-floating envelope">
-            <a href = "mailto: rose.lin.swe@gmail.com"><i className="fa fa-envelope" /></a>
-          </button>
-        </MDBNavbarNav>
-        <MDBCollapse id="navbarCollapse3" navbar>
+          <div>
+            <button className="btn-floating linkedin">
+              <a href="https://www.linkedin.com/in/roseswe/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin" /></a>
+            </button>
+            <button className="btn-floating github">
+              <a href="https://github.com/R-SE" target="_blank" rel="noopener noreferrer"><i className="fab fa-github" /></a>
+            </button>
+            <button className="btn-floating envelope">
+              <a href = "mailto: rose.lin.swe@gmail.com"><i className="fa fa-envelope" /></a>
+            </button>
+          </div>
+        <MDBCollapse navbar>
           <MDBNavbarNav right>
           {NavbarPage.ROUTES.map(({page, text}) => (
             <MDBNavItem key={text} active={this.state.activePage === page}>

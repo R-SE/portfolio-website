@@ -57,8 +57,8 @@ const SkillsPage = () => {
         <StyledSpan>What's important to you?</StyledSpan>
       </MDBCardTitle>
       <h4>
-        <StyledSpan>Let me know your priorities</StyledSpan>{' '}
-        <StyledSpan>by drag and dropping my skills.</StyledSpan>
+        <StyledSpan>Let me know your priorities by </StyledSpan>{' '}
+        <StyledSpan>drag and dropping my skills.</StyledSpan>
       </h4>
       </TitleBox>
 

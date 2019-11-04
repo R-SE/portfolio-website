@@ -21,31 +21,47 @@ const SkillIconsContainer = styled.div`
 
 const ContactForm = ({skills}) => (
   <StyledContactForm>
-    <form>
+    <form
+      action="https://formspree.io/xrgzwzrv"
+      method="POST"
+    >
       <p className="h4 text-center mb-4">Send me a message</p>
       <MDBInput
         type="text"
         label="YOUR NAME"
+        name="name"
       />
       <MDBInput
         type="email"
         label="YOUR EMAIL"
+        name="_replyto"
       />
       <MDBInput
         type="text"
         label="SUBJECT"
+        name="_subject"
       />
       <label
-        htmlFor="defaultFormContactMessageEx"
+        htmlFor="messageBody"
         className="grey-text"
       >
         YOUR MESSAGE
       </label>
       <textarea
         type="text"
-        id="defaultFormContactMessageEx"
+        id="messageBody"
         className="form-control"
         rows="3"
+        name="message"
+      />
+      <textarea
+        hidden
+        type="text"
+        id="skillsSelected"
+        className="form-control"
+        rows="3"
+        name="skills-selected"
+        value={skills.map(skill => skill.content).join(', ')}
       />
       <br />
       <label className="grey-text">TOP CHOSEN SKILLS</label>
@@ -53,7 +69,7 @@ const ContactForm = ({skills}) => (
         {skills.map(skill => skill.icon)}
       </SkillIconsContainer>
       <div className="text-center mt-4">
-        <MDBBtn color="info" outline>
+        <MDBBtn color="info" outline type="submit">
           Send
           <MDBIcon far icon="paper-plane" className="ml-2" />
         </MDBBtn>
