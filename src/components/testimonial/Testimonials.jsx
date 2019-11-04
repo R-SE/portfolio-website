@@ -29,6 +29,11 @@ const TestimonialsGroup = styled.div`
   flex-wrap: wrap;
   margin-top: 1em;
   justify-content: space-evenly;
+  align-text: justify;
+`;
+
+const StyledMDBCardText = styled(MDBCardText)`
+  text-align: justify;
 `;
 
 const TESTIMONIALS = [
@@ -65,7 +70,7 @@ const Card = ({testimonial: {name, position, text, image}}) => {
       <MDBCardBody>
         <StyledMDBCardTitle>{name}</StyledMDBCardTitle>
         <StyledSubtitle className="card-subtitle">{position}</StyledSubtitle>
-        <MDBCardText>{text}</MDBCardText>
+        <StyledMDBCardText>{text}</StyledMDBCardText>
       </MDBCardBody>
     </StyledCard>
   )

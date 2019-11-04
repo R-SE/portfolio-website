@@ -23,7 +23,7 @@ const SplitContainer = styled(MDBContainer)`
   flex-wrap: wrap;
   max-width: none;
   align-items: self-start;
-  justify-content: space-around;
+  justify-content: center;
 
   > div:first-child {
     max-width: 400px;

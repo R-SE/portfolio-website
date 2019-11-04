@@ -40,7 +40,7 @@ const StyledMDBNavbar = styled(MDBNavbar)`
   }
 
   .envelope {
-    background-color: #9948d9;
+    background-color: #a6372c;
   }
 
   .file-alt {
@@ -84,11 +84,11 @@ UNSAFE_componentWillReceiveProps(props) {
 
 render() {
   return (
-      <StyledMDBNavbar color="default-color" dark expand="md">
+      <StyledMDBNavbar color="default-color" dark expand="md" className="justify-content-sm-center">
         <MDBCollapse navbar style={{"flex-grow": 0}}>
           <Link to="/" ><strong className="white-text">Rose Lin | Software Engineer </strong></Link>
         </MDBCollapse>
-          <div>
+            <MDBCollapse navbar>
             <button className="btn-floating linkedin">
               <a href="https://www.linkedin.com/in/roseswe/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin" /></a>
             </button>
@@ -98,17 +98,15 @@ render() {
             <button className="btn-floating envelope">
               <a href = "mailto: rose.lin.swe@gmail.com"><i className="fa fa-envelope" /></a>
             </button>
-          </div>
-        <MDBCollapse navbar>
-          <MDBNavbarNav right>
+          </MDBCollapse>
+          <MDBNavbarNav right style={{margin: "auto"}}>
           {NavbarPage.ROUTES.map(({page, text}) => (
             <MDBNavItem key={text} active={this.state.activePage === page}>
               <MDBNavLink to={page}>{text}</MDBNavLink>
             </MDBNavItem>
           ))}
-          <MDBNavItem><a className="nav-link Ripple-parent" href="/Rose_Lin_Resume_Software_Engineer.pdf" download>RESUME</a></MDBNavItem>
+          <MDBNavItem><a className="nav-link Ripple-parent" href="/Rose_Lin_Resume.pdf" download>RESUME</a></MDBNavItem>
           </MDBNavbarNav>
-        </MDBCollapse>
       </StyledMDBNavbar>
     );
   }

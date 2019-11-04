@@ -6,6 +6,7 @@ const StyledContactForm = styled.div`
   background-color: white;
   padding: 1em;
   margin-top: 1em;
+  margin-bottom: 2em;
   max-width: 500px;
   min-width: 320px;
   width: 40%;
@@ -13,7 +14,6 @@ const StyledContactForm = styled.div`
 
 const SkillIconsContainer = styled.div`
   i {
-    margin: 3px;
     margin: 5px;
     font-size: 1.5em;
   }
