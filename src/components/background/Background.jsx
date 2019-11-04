@@ -1,8 +1,7 @@
 import React from 'react';
 import { MDBMask, MDBView } from "mdbreact";
-// TODO: Replace with actual background image.
 import background from "../../assets/20191102_105510.jpg";
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const BackgroundImg = styled.img`
   opacity: 0.4;

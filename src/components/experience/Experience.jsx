@@ -29,7 +29,7 @@ const Experience = () => (
       <StyledSpan>(SEP 2018 to Now)</StyledSpan>
     </StyledCardTitle>
     <StyledCardTitle>
-      See what others have to say about my work!
+      Hear what others have to say about my work!
     </StyledCardTitle>
     <Testimonials />
     </MDBCardBody>

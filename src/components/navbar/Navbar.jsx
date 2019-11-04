@@ -73,14 +73,12 @@ class NavbarPage extends Component {
 
 componentDidMount() {
   this.setState({activePage: this.props.location.pathname});
+  const quote = `"To me programming is more than an important practical art. It is also a gigantic undertaking in the foundations of knowledge." - Grace Hopper`;
+  console.log(`%c ${quote}`, 'background: #0073b1; color: white; display: block;');
 }
 
-componentWillReceiveProps(props) {
+UNSAFE_componentWillReceiveProps(props) {
   this.setState({activePage: props.location.pathname});
-}
-
-downloadResume() {
-  console.log('downloading')
 }
 
 render() {
@@ -107,7 +105,7 @@ render() {
               <MDBNavLink to={page}>{text}</MDBNavLink>
             </MDBNavItem>
           ))}
-          <MDBNavItem><a className="nav-link Ripple-parent" href="/Rose_Lin_Resume_Software_Engineer.pdf" download onClick={this.downloadResume}>RESUME</a></MDBNavItem>
+          <MDBNavItem><a className="nav-link Ripple-parent" href="/Rose_Lin_Resume_Software_Engineer.pdf" download>RESUME</a></MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>
       </StyledMDBNavbar>

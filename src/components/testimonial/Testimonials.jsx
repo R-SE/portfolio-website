@@ -1,9 +1,9 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from 'mdbreact';
 import styled from 'styled-components';
+import suminPic from "../../assets/testimonial_sumin.jpg";
 import keithPic from "../../assets/testimonial_keith.jpg";
 import nikolaPic from "../../assets/testimonial_nikola.jpg";
-import suminPic from "../../assets/testimonial_sumin.jpg";
 import younginPic from "../../assets/testimonial_youngin.jpg";
 
 const StyledMDBCardTitle = styled(MDBCardTitle)`
@@ -33,23 +33,29 @@ const TestimonialsGroup = styled.div`
 
 const TESTIMONIALS = [
   {
-    name: "Keith Wood",
-    position: "Product Manager @ Noom",
-    image: keithPic,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat vel dui a, porta interdum augue. Duis in consequat augue, id facilisis quam. Suspendisse tincidunt ante at posuere luctus. Vestibulum tellus nisl, ornare eget nulla ut, sagittis dictum lectus. Fusce a mollis sapien, sed vestibulum erat. Aliquam eget lacinia nisl, in venenatis ex. Ut vel nisi mollis justo pellentesque hendrerit. Quisque dictum purus arcu, eget convallis turpis vestibulum ut. Ut dui ante, faucibus et molestie sit amet, ullamcorper quis nunc. Fusce id metus scelerisque felis venenatis pretium eget vel augue. Maecenas eu erat viverra libero convallis facilisis. Donec."
-  },
-  {
     name: "Sumin Kang",
     position: "Tech Lead @ Noom",
     image: suminPic,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat vel dui a, porta interdum augue. Duis in consequat augue, id facilisis quam. Suspendisse tincidunt ante at posuere luctus. Vestibulum tellus nisl, ornare eget nulla ut, sagittis dictum lectus. Fusce a mollis sapien, sed vestibulum erat. Aliquam eget lacinia nisl, in venenatis ex. Ut vel nisi mollis justo pellentesque hendrerit. Quisque dictum purus arcu, eget convallis turpis vestibulum ut. Ut dui ante, faucibus et molestie sit amet, ullamcorper quis nunc. Fusce id metus scelerisque felis venenatis pretium eget vel augue. Maecenas eu erat viverra libero convallis facilisis. Donec."
+    text: "I had the pleasure of working closely with Rose as her tech lead. Coming out of bootcamp a little over a year ago, Rose has made significant contributions in the team and has grown into a reliable engineer I can trust to get things done. Rose is one of the most detail-oriented and thorough engineers I have seen. Her biggest strength is being able to think through edge cases and coming up with comprehensive test plans. Her code is of high quality, and that also extends to when she is reviewing other people's code. She is a great communicator in both written and verbal aspects. She created detailed onboarding documents and came up with a status sheet to facilitate communication with the PMs. She is a team player and genuinely cares for others, and is a delight to work with. Most importantly, Rose has the drive and work ethic to become a great engineer, and I strongly believe she will achieve great things if she continues down this path. I’m excited to see what’s ahead of her!"
   },
-  {
-    name: "Youngin Suh",
-    position: "Product Designer @ Noom",
-    image: younginPic,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat vel dui a, porta interdum augue. Duis in consequat augue, id facilisis quam. Suspendisse tincidunt ante at posuere luctus. Vestibulum tellus nisl, ornare eget nulla ut, sagittis dictum lectus. Fusce a mollis sapien, sed vestibulum erat. Aliquam eget lacinia nisl, in venenatis ex. Ut vel nisi mollis justo pellentesque hendrerit. Quisque dictum purus arcu, eget convallis turpis vestibulum ut. Ut dui ante, faucibus et molestie sit amet, ullamcorper quis nunc. Fusce id metus scelerisque felis venenatis pretium eget vel augue. Maecenas eu erat viverra libero convallis facilisis. Donec."
-  },
+  // {
+  //   name: "Keith Wood",
+  //   position: "Product Manager @ Noom",
+  //   image: keithPic,
+  //   text: "Reference available upon request"
+  // },
+  // {
+  //   name: "Nikola Predovan",
+  //   position: "Senior Front-end Engineer @ Noom",
+  //   image: nikolaPic,
+  //   text: "Reference available upon request"
+  // },
+  // {
+  //   name: "Youngin Suh",
+  //   position: "Product Designer @ Noom",
+  //   image: younginPic,
+  //   text: "Reference upon request"
+  // },
 ]
 
 const Card = ({testimonial: {name, position, text, image}}) => {
