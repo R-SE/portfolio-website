@@ -34,7 +34,7 @@ const MDBOverrides = createGlobalStyle`
   }
 
   .card {
-    // max-width: 324px;
+    max-width: 400px;
   }
 `
 

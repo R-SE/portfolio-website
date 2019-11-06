@@ -43,12 +43,12 @@ const TESTIMONIALS = [
     image: suminPic,
     text: "I had the pleasure of working closely with Rose as her tech lead. Coming out of bootcamp a little over a year ago, Rose has made significant contributions in the team and has grown into a reliable engineer I can trust to get things done. Rose is one of the most detail-oriented and thorough engineers I have seen. Her biggest strength is being able to think through edge cases and coming up with comprehensive test plans. Her code is of high quality, and that also extends to when she is reviewing other people's code. She is a great communicator in both written and verbal aspects. She created detailed onboarding documents and came up with a status sheet to facilitate communication with the PMs. She is a team player and genuinely cares for others, and is a delight to work with. Most importantly, Rose has the drive and work ethic to become a great engineer, and I strongly believe she will achieve great things if she continues down this path. I’m excited to see what’s ahead of her!"
   },
-  // {
-  //   name: "Keith Wood",
-  //   position: "Product Manager @ Noom",
-  //   image: keithPic,
-  //   text: "Reference available upon request"
-  // },
+  {
+    name: "Keith Wood",
+    position: "Product Manager @ Noom",
+    image: keithPic,
+    text: `Rose and I worked together on numerous projects at Noom, and I would highly recommend her to any team or project lead. She is an effective communicator, efficient worker, and always brought ideas to the table that improved both the design and technical elements of our projects. As a PM with a limited technical background, Rose was instrumental in bringing guidance and the "engineering" perspective to everything we worked on, and was a pleasure to work with.`
+  },
   // {
   //   name: "Nikola Predovan",
   //   position: "Senior Front-end Engineer @ Noom",
@@ -84,7 +84,7 @@ const StyledCard = styled(MDBCard)`
 
 const Testimonials = () => (
   <TestimonialsGroup>
-    {TESTIMONIALS.map(testimonial => <Card testimonial={testimonial} />)}
+    {TESTIMONIALS.map(testimonial => <Card key={testimonial.name} testimonial={testimonial} />)}
   </TestimonialsGroup>
 );
 

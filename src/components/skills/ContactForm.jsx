@@ -14,7 +14,7 @@ const StyledContactForm = styled.div`
 
 const SkillIconsContainer = styled.div`
   i {
-    margin: 5px;
+    margin: 4px;
     font-size: 1.5em;
   }
 `;
@@ -56,6 +56,7 @@ const ContactForm = ({skills}) => (
       />
       <textarea
         hidden
+        readOnly
         type="text"
         id="skillsSelected"
         className="form-control"
@@ -64,7 +65,7 @@ const ContactForm = ({skills}) => (
         value={skills.map(skill => skill.content).join(', ')}
       />
       <br />
-      <label className="grey-text">TOP CHOSEN SKILLS</label>
+      <label className="grey-text">YOUR TOP 8 CHOSEN SKILLS</label>
       <SkillIconsContainer>
         {skills.map(skill => skill.icon)}
       </SkillIconsContainer>

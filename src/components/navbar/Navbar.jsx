@@ -85,7 +85,7 @@ UNSAFE_componentWillReceiveProps(props) {
 render() {
   return (
       <StyledMDBNavbar color="default-color" dark expand="md" className="justify-content-sm-center">
-        <MDBCollapse navbar style={{"flex-grow": 0}}>
+        <MDBCollapse navbar style={{"flexGrow": 0}}>
           <Link to="/" ><strong className="white-text">Rose Lin | Software Engineer </strong></Link>
         </MDBCollapse>
             <MDBCollapse navbar>

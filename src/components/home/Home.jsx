@@ -46,7 +46,7 @@ const StyledBreak = styled.br`
 `;
 
 const Home = () => {
-  const TIME_IN_MS_PER_STRING = 3000;
+  const TIME_IN_MS_PER_STRING = 7000;
   const [idx, setIdx] = useState(0);
   const [style, setStyle] = useState({opacity: 1, transform: "scale(1)"});
 
