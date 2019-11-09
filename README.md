@@ -6,4 +6,4 @@ Static site hosted on Amazon Web Services S3.
 
 [This Website](http://roseswe.com/)
 
-[My LinkedIn](linkedin.com/in/RoseSWE)
+[My LinkedIn](http://linkedin.com/in/RoseSWE)
